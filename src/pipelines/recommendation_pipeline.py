@@ -109,6 +109,13 @@ def recommend_restaurants(
         pd.notna(recommendations),
         None
     )
+    response_data = recommendations.to_dict(orient="records")
+
+    for restaurant in response_data:
+        for key, value in restaurant.items():
+            if isinstance(value, float) and pd.isna(value):
+                restaurant[key] = None
+
     return {
-        "recommendations": recommendations.to_dict(orient="records"),
+        "recommendations": response_data,
     }
