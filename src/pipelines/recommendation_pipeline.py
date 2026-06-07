@@ -105,6 +105,10 @@ def recommend_restaurants(
         .str.replace(r"\s+", " ", regex=True)
         .str.strip()
     )
+    recommendations = recommendations.where(
+        pd.notna(recommendations),
+        None
+    )
     return {
         "recommendations": recommendations.to_dict(orient="records"),
     }
