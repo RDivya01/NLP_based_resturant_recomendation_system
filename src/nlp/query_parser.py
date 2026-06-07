@@ -79,10 +79,24 @@ def _loads_json_response(response_text: str) -> dict[str, Any]:
 def _normalize_parsed_query(parsed: dict[str, Any]) -> dict[str, Any]:
     """Normalize parser output to the expected keys and supported priorities."""
 
+    if parsed.get("priority") is None:
+        parsed["priority"] = "general"
+
     model = ParsedQuery(**parsed)
-    result = model.model_dump() if hasattr(model, "model_dump") else model.dict()
-    priority = result.get("priority") or "general"
-    result["priority"] = priority if priority in SUPPORTED_PRIORITIES else "general"
+
+    result = (
+        model.model_dump()
+        if hasattr(model, "model_dump")
+        else model.dict()
+    )
+
+    priority = result.get("priority")
+    result["priority"] = (
+        priority
+        if priority in SUPPORTED_PRIORITIES
+        else "general"
+    )
+
     return result
 
 

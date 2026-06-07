@@ -36,6 +36,10 @@ def recommend_restaurants(
     parsed_query = parse_user_query(user_query)
     intent = analyze_intent(parsed_query)
     candidates = retrieve_candidates(restaurants, parsed_query)
+    if candidates.empty:
+        return {
+            "recommendations": []
+        }
     ranked = rank_restaurants(candidates, intent["weights"])
     ranked = (
         ranked
@@ -49,6 +53,10 @@ def recommend_restaurants(
         )
     )
     recommendations = add_recommendation_reasons(get_top_n(ranked, top_n))
+    if recommendations.empty:
+        return {
+            "recommendations": []
+        }
     response_columns = [
         "name",
         "address",
