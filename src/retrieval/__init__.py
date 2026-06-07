@@ -1,0 +1,1 @@
+"""Candidate restaurant retrieval."""

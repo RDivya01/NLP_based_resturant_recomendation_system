@@ -1,0 +1,135 @@
+Key Performance Indicators (KPIs)
+------------------------------------------------------------------------------------------------------
+
+1. Recommendation Relevance
+-------------------------------------------------------------
+
+Measures how relevant the recommendations are.
+
+Precision@K
+Precision@K=
+K
+Relevant Restaurants in Top K
+	​
+
+
+Example:
+
+Top 10 recommendations
+
+7 are relevant
+
+Precision@10 = 70%
+
+Target:
+
+70%
+
+2. Query Understanding Accuracy
+----------------------------------------------------------------
+
+Measures NLP extraction quality.
+
+Entity Extraction Accuracy
+Accuracy=
+Total Entities
+Correctly Extracted Entities
+	​
+
+
+Entities:
+
+Location
+Cuisine
+Budget
+Dining preference
+
+Target:
+
+90%
+
+3. Cuisine Match Rate
+----------------------------------------------------------------
+
+Measures how often recommended restaurants actually serve the requested cuisine.
+
+Cuisine Match Rate=
+Total Recommendations
+Correct Cuisine Matches
+	​
+
+
+Target:
+
+95%
+
+4. Top-K Recommendation Accuracy
+---------------------------------------------------------------------
+
+Measures whether highly rated restaurants appear in the top recommendations.
+
+Target:
+
+Top 5 recommendations should contain at least 3 highly-rated matching restaurants.
+
+5. Sentiment Utilization Score
+-------------------------------------------------------------------------
+
+Percentage of recommendations influenced by review sentiment.
+
+Total Recommendations
+Recommendations Using Review Score
+	​
+
+
+Target:
+
+90%
+
+6. Average Recommendation Score
+--------------------------------------------------------------------------
+
+Monitor overall quality of returned recommendations.
+
+Weighted score:
+
+Score=0.35(CuisineMatch)+0.25(Rating)+0.20(Sentiment)+0.10(Votes)+0.10(BudgetMatch)
+
+Track average score across all recommendations.
+
+7. Response Time
+-----------------------------------------------------------------------------
+
+Time required to generate recommendations.
+
+Target:
+
+Query parsing < 100 ms
+Recommendation generation < 1 sec
+End-to-end response < 2 sec
+
+8. Coverage
+-----------------------------------------------------------------------------
+Measures the percentage of restaurants that can potentially be recommended.
+
+Coverage=
+Total Restaurants
+Restaurants Appearing in Recommendations
+	​
+
+
+Target:
+
+80%
+
+_______________________________________________________________________________________________________________
+Success Criteria
+---------------------------------------------------------------------------------------------------------------
+The project is successful if:
+
+Natural language queries are correctly understood with >90% extraction accuracy.
+Recommendations achieve >70% Precision@10.
+Cuisine matching exceeds 95%.
+Sentiment analysis improves ranking quality.
+End-to-end recommendation time remains under 2 seconds.
+Users can discover restaurants through conversational queries without manually selecting filters.

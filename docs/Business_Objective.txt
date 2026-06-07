@@ -1,0 +1,5 @@
+
+Business objective:
+---------------------------------------------------------------
+
+To simplify restaurant discovery by allowing users to interact using natural language while receiving high-quality recommendations tailored to their dining preferences.

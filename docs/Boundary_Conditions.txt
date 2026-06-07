@@ -1,0 +1,103 @@
+----------------------------------------------------
+Boundary Conditions
+----------------------------------------------------
+
+Included in Scope:
+_____________________________________________________
+
+Restaurant Discovery
+---------------------------------------------
+
+✔ Location-based recommendations
+
+✔ Cuisine-based recommendations
+
+✔ Budget-based recommendations
+
+✔ Online ordering recommendations
+
+✔ Table booking recommendations
+
+✔ Top-N restaurant recommendations
+
+NLP Features
+----------------------------------------------
+
+✔ Natural language query processing
+
+✔ Entity extraction
+
+✔ Intent recognition
+
+✔ Cuisine extraction
+
+✔ Location extraction
+
+✔ Budget extraction
+
+Review Analytics
+-----------------------------------------------
+
+✔ Sentiment analysis
+
+✔ Food quality analysis
+
+✔ Ambiance analysis
+
+✔ Authenticity analysis
+
+✔ Service quality analysis
+
+Ranking
+-------------------------------------------------
+
+✔ Rating-based ranking
+
+✔ Vote-based ranking
+
+✔ Sentiment-based ranking
+
+✔ Weighted recommendation score
+_______________________________________________________________
+_______________________________________________________________
+
+
+Out of Scope:
+___________________________________________________________
+
+Real-Time Features
+-------------------------------------------------
+
+✘ Live restaurant availability
+
+✘ Real-time menu updates
+
+✘ Real-time pricing
+
+✘ Real-time delivery time estimation
+
+✘ Live table availability
+
+User Personalization
+--------------------------------------------------
+✘ User login system
+
+✘ User history tracking
+
+✘ Collaborative filtering
+
+✘ User-to-user recommendations
+
+✘ Recommendation based on previous orders
+
+External Data Sources
+------------------------------------------------------
+✘ Google Reviews
+
+✘ Swiggy Data
+
+✘ Live Zomato API
+
+✘ Social Media Data
+____________________________________________________________________
+____________________________________________________________________

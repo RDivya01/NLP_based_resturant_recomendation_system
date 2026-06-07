@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+openai_api_key.txt
+tmp_*.py
+data/raw/zomato_bangalore.csv
+.vscode/*

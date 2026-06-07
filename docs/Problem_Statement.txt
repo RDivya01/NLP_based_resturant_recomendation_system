@@ -1,0 +1,30 @@
+Title:
+------------------------------------------------------------------------
+Natural Language-Based Restaurant Recommendation System 
+
+Problem Statement:
+-------------------------------------------------------------------------
+Develop an intelligent restaurant recommendation system that accepts user requests in natural language and recommends restaurants based on inferred preferences such as location, cuisine, dining mode, budget, and restaurant characteristics.
+The system should automatically extract user intent and preferences from free-text queries and identify the most relevant restaurants by combining restaurant metadata, ratings, popularity metrics, and customer review insights.
+
+The recommendation engine should be capable of answering queries such as:
+---------------------------------------------------------------------------
+"Suggest good North Indian restaurants in Indiranagar under ₹1000."
+"I want an authentic South Indian restaurant near Koramangala."
+"Recommend places with table booking and great ambiance in Whitefield."
+"Best biryani restaurants in HSR Layout."
+"Good cafes in MG Road for online ordering."
+"Restaurants serving authentic Italian food with high ratings."
+
+The system should rank restaurants based on:
+-----------------------------------------------------------------------------
+User preference matching
+Cuisine relevance
+Location relevance
+Budget compatibility
+Restaurant ratings
+Customer votes
+Sentiment derived from customer reviews
+Ambiance and authenticity indicators extracted from reviews
+
+The objective is to provide personalized and context-aware restaurant recommendations without requiring users to enter structured filters.

@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn
+nltk
+openai
+python-dotenv
+pydantic
+fastapi
+uvicorn
+httpx<0.28
+pytest

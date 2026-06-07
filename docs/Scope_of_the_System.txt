@@ -1,0 +1,35 @@
+Scope of the System:
+-------------------------------------
+
+Input
+______________________________________
+Natural language text from users.
+______________________________________
+
+Examples:
+Best Italian restaurants in Koramangala under 1500
+Good places for dinner with table booking in Whitefield
+Authentic South Indian food near Jayanagar
+
+
+Output
+_____________________________________________
+Ranked list of recommended restaurants with:
+
+Restaurant Name
+Location
+Cuisine
+Rating
+Cost for Two
+Recommendation Score
+Reason for Recommendation
+_______________________________________________
+
+Example:
+1. Truffles
+   Rating: 4.5
+   Cost for Two: ₹900
+   Reason:
+   Highly rated Italian cuisine,
+   strong positive customer reviews,
+   matches your budget.

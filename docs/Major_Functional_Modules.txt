@@ -1,0 +1,270 @@
+Major Functional Modules
+
+
+                    ┌─────────────────────────────┐
+                    │       Zomato Dataset        │
+                    │                             │
+                    │ Restaurants                 │
+                    │ Reviews                     │
+                    │ Ratings                     │
+                    │ Votes                       │
+                    └─────────────┬───────────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────────┐
+                    │ Review Intelligence Engine  │
+                    │                             │
+                    │ Sentiment Analysis          │
+                    │ Aspect Analysis             │
+                    └─────────────┬───────────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────────┐
+                    │ Enriched Restaurant Store   │
+                    │                             │
+                    │ Food Score                  │
+                    │ Ambiance Score              │
+                    │ Authenticity Score          │
+                    │ Service Score               │
+                    └─────────────────────────────┘
+
+
+User Query
+     │
+     ▼
+┌─────────────────────────────────────────────┐
+│ Natural Language Query Processing           │
+│ Intent Extraction                           │
+│ Entity Extraction                           │
+│ Ambiguity Handling                          │
+└─────────────────────┬───────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────┐
+│ Candidate Restaurant Retrieval              │
+│ Location Filter                             │
+│ Online Order Filter                         │
+│ Table Booking Filter                        │
+└─────────────────────┬───────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────┐
+│ Cuisine + Budget Matching Engine            │
+└─────────────────────┬───────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────┐
+│ Ranking Engine                              │
+│                                             │
+│ Rating Score                                │
+│ Vote Score                                  │
+│ Sentiment Score                             │
+│ Food Score                                  │
+│ Ambiance Score                              │
+│ Authenticity Score                          │
+│ Cuisine Match Score                         │
+│ Budget Match Score                          │
+└─────────────────────┬───────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────┐
+│ Recommendation & Explainability Layer       │
+└─────────────────────┬───────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────┐
+│ Top-N Recommended Restaurants               │
+└─────────────────────────────────────────────┘
+
+
+
+---------------------------------------------------------------------------------------------------------------
+Component Descriptions
+---------------------------------------------------------------------------------------------------------------
+
+1. Zomato Dataset
+
+Purpose: Primary data source containing restaurant metadata.
+
+Inputs
+Restaurant Name
+Location
+Cuisine
+Ratings
+Votes
+Reviews
+Cost for Two
+Online Order
+Table Booking
+Output
+
+Raw restaurant information.
+
+2. Review Intelligence Engine
+
+Purpose: Convert unstructured customer reviews into measurable restaurant quality indicators.
+
+Functions
+Sentiment Analysis
+
+Determines overall customer satisfaction.
+
+Example:
+
+Positive = 0.89
+Aspect-Based Analysis
+
+Extracts scores for:
+
+Food Quality
+Ambiance
+Service
+Authenticity
+Value for Money
+Output
+Restaurant A
+
+Food Score = 0.92
+Ambiance Score = 0.81
+Authenticity Score = 0.87
+
+
+3. Enriched Restaurant Store
+
+Purpose: Store restaurant information together with generated sentiment and aspect scores.
+
+Contains
+Original restaurant attributes
+Sentiment score
+Food score
+Ambiance score
+Authenticity score
+Service score
+
+This becomes the dataset used during recommendation.
+
+4. Natural Language Query Processing
+
+Purpose: Convert user queries into structured search criteria.
+
+Functions
+Intent Extraction
+
+Example:
+
+Best Italian restaurants
+
+Intent:
+
+Restaurant Recommendation
+Entity Extraction
+
+Extract:
+
+Location
+Cuisine
+Budget
+Online Order
+Table Booking
+Ambiguity Handling
+
+Example:
+
+Suggest good restaurants
+
+Ask:
+
+Which cuisine are you interested in?
+
+
+5. Candidate Restaurant Retrieval
+
+Purpose: Retrieve restaurants satisfying basic constraints.
+
+Filters
+Location
+Online Ordering
+Table Booking
+
+Example:
+
+Location = Koramangala
+Online Order = Yes
+
+
+6. Cuisine + Budget Matching Engine
+
+Purpose: Measure how well each restaurant matches user preferences.
+
+Cuisine Matching
+
+Example:
+
+User:
+
+Italian
+
+Restaurant:
+
+Italian, Continental
+
+High Match Score.
+
+Budget Matching
+
+Example:
+
+Budget = ₹1200
+Restaurant Cost = ₹1000
+
+High Match Score.
+
+7. Ranking Engine
+
+Purpose: Generate a final recommendation score.
+
+Inputs
+Rating Score
+Vote Score
+Cuisine Match Score
+Budget Match Score
+Sentiment Score
+Food Score
+Ambiance Score
+Authenticity Score
+Output
+
+Final ranking score.
+
+Example:
+
+Restaurant A = 0.92
+Restaurant B = 0.88
+Restaurant C = 0.83
+
+
+8. Recommendation & Explainability Layer
+
+Purpose: Generate human-readable recommendations.
+
+Example:
+
+Recommended because:
+
+• Serves Italian cuisine
+• Rated 4.5+
+• Excellent food reviews
+• Within your budget
+
+
+9. Top-N Recommended Restaurants
+
+Purpose: Present final ranked results.
+
+Example:
+
+1. Truffles
+2. Chianti
+3. Pasta Street
+4. Toscano
+5. The Pizza Bakery
