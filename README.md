@@ -283,19 +283,68 @@ pytest
 
 ---
 
-## Dataset
+## Dataset Source
 
-This project uses the publicly available Zomato Bangalore Restaurant Dataset.
+This project is built using the publicly available Zomato Bangalore Restaurant Dataset available on Kaggle.
+
+Dataset:
+
+https://www.kaggle.com/datasets/rajeshrampure/zomato-dataset
 
 The dataset contains:
 
 * Restaurant metadata
-* Ratings
-* Votes
-* Cost information
+* Restaurant locations
 * Cuisine information
+* Ratings and votes
+* Cost information
 * Customer reviews
 
+The raw dataset is processed through custom data cleaning, review intelligence, sentiment analysis, and feature engineering pipelines to generate enriched restaurant features used by the recommendation engine.
+
+---
+
+## Frontend Application
+
+A separate React frontend is available for interacting with the recommendation API through a modern web interface.
+
+Frontend Repository:
+
+https://github.com/RDivya01/AI-Restaurant-Recommendation-System
+
+Frontend Features:
+
+* Natural language restaurant search
+* Responsive React user interface
+* Tailwind CSS styling
+* Restaurant recommendation cards
+* Recommendation explanations
+* Integration with the FastAPI backend
+
+---
+
+## Live System Architecture
+
+```text
+User
+ │
+ ▼
+React Frontend
+ │
+ ▼
+FastAPI Backend
+ │
+ ├── OpenAI Query Parser
+ │
+ ├── Candidate Retrieval
+ │
+ ├── Ranking Engine
+ │
+ └── Explainability Layer
+ │
+ ▼
+Restaurant Recommendations
+```
 ---
 
 ## Future Improvements
@@ -306,7 +355,8 @@ The dataset contains:
 * Collaborative filtering
 * Recommendation evaluation framework
 * Personalized ranking
-* React frontend with conversational search
+* Recommendation feedback loop
+* Restaurant image integration
 
 ---
 
