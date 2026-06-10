@@ -9,3 +9,6 @@ fastapi
 uvicorn
 httpx<0.28
 pytest
+rapidfuzz
+matplotlib
+seaborn
